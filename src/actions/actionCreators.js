@@ -3,7 +3,8 @@ import {
   REMOVE_SERVICE,
   CHANGE_SERVICE_FIELD,
   RESET_SERVICE_FIELDS,
-  EDIT_SERVICE
+  EDIT_SERVICE,
+  FILTER_SERVICES
 } from './actionTypes';
 
 export function addService(name, price) {
@@ -24,4 +25,8 @@ export function resetServiceFields() {
 
 export function editService(editingId, editedName, editedPrice) {
   return {type: EDIT_SERVICE, payload: {editingId, editedName, editedPrice}}
+}
+
+export function filterServices(filterString) {
+  return {type: FILTER_SERVICES, payload: {filterString}};
 }
